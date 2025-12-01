@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <link rel="stylesheet" href="animation-styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+
+.product-card:nth-child(1) { 
+    animation-delay: 0.1s; 
+}
+.product-card:nth-child(2) { 
+    animation-delay: 0.2s; 
+}
+.product-card:nth-child(3) { 
+    animation-delay: 0.3s; 
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+.product-card h3 {
+    padding: 1rem 1.5rem 0.5rem;
+    color: #2c3e50;
+    font-size: 20px;
+}
+
+.product-card .price {
+    padding: 0 15px;
+    color: #e74c3c;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-card p {
+    padding: 0 15px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.product-card button {
+    margin: 0 15px 15px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    </style>
+</head>
+<body>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://picsum.photos/300/200?random=1" alt="Product 1">
+            <h3>Wireless Headphones</h3>
+            <p class="price">$99.99</p>
+            <p>High-quality sound with noise cancellation</p>
+            <button>Add to Cart</button>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://picsum.photos/300/200?random=2" alt="Product 2">
+            <h3>Smart Watch</h3>
+            <p class="price">$199.99</p>
+            <p>Track your fitness and stay connected</p>
+            <button>Add to Cart</button>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://picsum.photos/300/200?random=3" alt="Product 3">
+            <h3>Laptop Stand</h3>
+            <p class="price">$49.99</p>
+            <p>Ergonomic design for better posture</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</body>
+</html>
