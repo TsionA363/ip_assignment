@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 1rem 2rem;
+    
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #34495e;
+}
+
+.content {
+    padding: 10px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        margin-top: 10px;
+    }
+    
+    .menu a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #34495e;
+    }
+    
+    
+}
+    </style>
+</head>
+<body>
+   
+
+    <nav class="navbar">
+        <div class="logo">BrandName</div>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <h1>Welcome to our website</h1>
+        <p>Resize the browser to see the responsive navigation in action.</p>
+    </div>
+
+</body>
+</html>
